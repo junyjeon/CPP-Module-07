@@ -1,4 +1,4 @@
-NAME		=	whatever
+NAME		=	iter
 
 CXX			=	c++ -g2
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
