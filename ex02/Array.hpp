@@ -10,6 +10,8 @@ private:
     T *arr; // 동적할당 배열
     // T arr[]; // 정적할당 배열
     unsigned int n;
+
+public:
     Array();
     Array(unsigned int n);
     Array(const Array &);
@@ -17,8 +19,6 @@ private:
     ~Array();
     T &operator[](unsigned int i);
     unsigned int size() const;
-
-public:
 };
 
 #include "Array.tpp"

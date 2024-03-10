@@ -1,14 +1,16 @@
-template <class T>
-Array<T>::Array() : n(0), arr(nullptr) {}
+#include "Array.hpp"
 
 template <class T>
-Array<T>::Array(unsigned int n) : n(n), arr(new T[n])
+Array<T>::Array() : n(0), arr(NULL) {}
+
+template <class T>
+Array<T>::Array(unsigned int n) : arr(new T[n]), n(n)
+{
+    for (unsigned int i = 0; i < n; i++)
     {
-        for (unsigned int i = 0; i < n; i++)
-        {
-            arr[i] = 0;
-        }
+        arr[i] = 0;
     }
+}
 
 template <class T>
 Array<T>::Array(Array const &other) // (새 메모리에) 포인터가 가리키는 데이터의 "내용"까지 복사(깊은 복사)
@@ -25,7 +27,7 @@ Array<T>::Array(Array const &other) // (새 메모리에) 포인터가 가리키
 }
 
 template <class T>
-Array<T> Array::&operator=(Array const &other)
+Array<T> &Array<T>::operator=(Array const &other)
 {
     if (this != &other)
     {
@@ -53,4 +55,3 @@ T &Array<T>::operator[](unsigned int i)
 
 template <class T>
 unsigned int Array<T>::size() const { return n; }
-

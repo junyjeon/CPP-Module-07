@@ -2,13 +2,15 @@
 
 int main()
 {
-    Array<int> intArray(5);
+    // int
+    Array<int> intArray(3);
     std::cout << "intArray size: " << intArray.size() << std::endl;
     for (unsigned int i = 0; i < intArray.size(); i++)
     {
         intArray[i] = i * 10;
         std::cout << "intArray[" << i << "]: " << intArray[i] << std::endl;
     }
+    std::cout << std::endl;
 
     // double
     Array<double> doubleArray(3);
@@ -23,11 +25,12 @@ int main()
 
     try
     {
-        std::cout << "Trying to access out of bounds: " << intArray[10] << std::endl;
+        std::cout << "Trying to access out of bounds: " << intArray[3];
     }
     catch (std::exception &e)
     {
-        std::cout << "Exception caught: " << e.what() << std::endl;
+        std::cout << std::endl
+                  << "Exception caught: " << e.what() << std::endl;
     }
 
     return 0;
