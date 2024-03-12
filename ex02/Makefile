@@ -2,7 +2,7 @@ NAME		=	Array
 
 CXX			=	c++ -g2
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
-CXXFLAGS	+=	-fsanitize=address -g2 -pedantic
+# CXXFLAGS	+=	-fsanitize=address -g2 -pedantic
 
 BUILD_DIR	=	build
 
